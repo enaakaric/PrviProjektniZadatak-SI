@@ -1,0 +1,180 @@
+* { /*sve pocetnevrijednosti a ima ih dosta defaultne resetuje na nulu ovo se mora da kasnije ne bi bilo problema */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: pink;
+}
+.container {/*on je glavni kako bi sve bilo centrirano fino PARENT!!!!!!*/
+    width: 100%;
+    max-width: 760px;
+    padding: 20px;
+    border: 1px solid gray;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+}
+nav {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.hamburgerNavigacija {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navigacijaLinkovi {
+    list-style: none;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+.navigacijaLinkovi li {
+    padding: 10px;
+}
+
+.navigacijaLinkovi li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navigacijaLinkovi li a:hover {
+    color: #555;
+}
+header {
+    margin: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 14px;
+    color: gray;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.galerija {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* To da imaju tri kolone*/
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.galerijaPoseban {
+    background-color: #e0e0e0;
+    height: 200px;
+    overflow: hidden; /* ne prelaze slike okv */
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galerijaPoseban img {
+    width: 100%; /* slika onolika koliki njen roditelj kontenjer sto je i svrha njega */
+    height: 100%; /* isto ali samo za visinu */
+    object-fit: cover; /* prilagodjeno */
+}
+.kontaktForma {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.kontaktForma form {
+    display: flex;
+    flex-direction: column;
+}
+.kontaktForma input,
+.kontaktForma textarea,
+.kontaktForma button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.kontaktForma button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+.kontaktForma button:hover { /*mis*/
+    background-color: #555;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+.mrezeIkone a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.mrezeIkone a:hover {
+    color: #555;
+}
+footer p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: gray;
+}
+.krug {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.twitter {
+    background-color: #1DA1F2;
+}
+
+.dribbble {
+    background-color: #EA4C89;
+}
+.ikoneDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.hobiSlikaContainer {
+    position: relative;
+    width: 100%;  /* cijela velicina roditelja*/
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hobiSlikaContainer img {
+    max-width: 100%; 
+    max-height: 400px; 
+    object-fit: contain;
+}
